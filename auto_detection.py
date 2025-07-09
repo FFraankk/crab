@@ -1,5 +1,5 @@
 import cv2
-from ultralytics import YOLO
+# from ultralytics import YOLO
 
 # --- 1. 定义你的自定义模型路径和类别名称 ---
 # 请将 'path/to/your/yolov11_custom_model.pt' 替换为你实际的模型文件路径
@@ -11,7 +11,7 @@ CLASS_NAMES = ["Mark", "Empty"] # 根据你的模型实际类别调整，注意�
 
 # --- 2. 加载YOLOv11自定义模型 ---
 try:
-    model = YOLO(MODEL_PATH)
+    # model = YOLO(MODEL_PATH)
     print(f"成功加载模型: {MODEL_PATH}")
 except Exception as e:
     print(f"加载模型失败: {e}")

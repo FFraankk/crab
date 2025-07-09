@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>828</width>
+    <height>610</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Serif</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* 设置整个主窗口的背景为蓝色 */
+QMainWindow {
+    background-color: #ADD8E6; /* 淡蓝色，你也可以使用其他蓝色，例如 blue, #4682B4 (钢蓝色) 等 */
+}
+
+/* 设置所有 QPushButton 的背景为灰色 */
+QPushButton {
+    background-color: #808080; /* 中灰色 */
+    color: white; /* 按钮文字颜色为白色，以便在灰色背景上清晰可见 */
+    border: 1px solid #666666; /* 添加一个浅灰色的边框 */
+    padding: 5px 10px; /* 增加内边距让按钮看起来更舒适 */
+    border-radius: 5px; /* 圆角边框 */
+}
+
+/* 当鼠标悬停在按钮上时，颜色变深一点（可选） */
+QPushButton:hover {
+    background-color: #696969; /* 稍微深一点的灰色 */
+}
+
+/* 当按钮被按下时，颜色再变深（可选） */
+QPushButton:pressed {
+    background-color: #505050; /* 更深的灰色 */
+}</string>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonIconOnly</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="video_feed_label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>130</y>
+      <width>411</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>190</y>
+      <width>181</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="quit">
+       <property name="font">
+        <font>
+         <family>Serif</family>
+         <pointsize>21</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>quit</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="good">
+       <property name="font">
+        <font>
+         <family>Serif</family>
+         <pointsize>21</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>good</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="bad">
+       <property name="font">
+        <font>
+         <family>Serif</family>
+         <pointsize>21</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>bad</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>40</y>
+      <width>291</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Serif</family>
+      <pointsize>25</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Crab detection</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::RichText</enum>
+    </property>
+    <property name="margin">
+     <number>3</number>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>828</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

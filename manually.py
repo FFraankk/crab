@@ -4,11 +4,21 @@ import time
 from threading import Thread
 import os
 
-# from your_design_ui import Ui_MainWindow
+from your_design_ui import Ui_MainWindow
+from PyQt5 import QtWidgets
+
 # --- 配置 ---
 # RTSP_URL = "192.168.1.102" 
 save_dir_bad = "saved_bad_crabs" 
 save_dir_good = "saved_good_crabs"  
+
+# class MyMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
+#     def __init__(self):q
+#         super().__init__()
+#         self.setupUi(self)
+#         self.setWindowTitle("Crab Detection")
+#         self.show()
+
 
 class Video:
     def __init__(self, rtsp_url):
@@ -82,3 +92,9 @@ if __name__ == "__main__":
     thread_show_img.start()
     thread_show_img.join()
 
+
+    # app = QtWidgets.QApplication(sys.argv)
+    # # 实例化您的自定义主窗口类
+    # mainWindow = MyMainWindow()
+    # mainWindow.show()
+    # sys.exit(app.exec_())
