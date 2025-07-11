@@ -4,11 +4,12 @@ import time
 from threading import Thread
 import os
 
-# --- 配置 ---
-# RTSP_URL = "192.168.1.102" 
+from manually_ui import Ui_MainWindow
+from PyQt5 import QtWidgets, QtGui, QtCore
+
+
 save_dir_bad = "saved_bad_crabs" 
 save_dir_good = "saved_good_crabs"  
-
 
 class Video():
     def __init__(self, rtsp_url):
@@ -68,16 +69,14 @@ class Video():
             print("Error: Could not read frame for saving.")
 
 
+
+
+class ManuallyWindow:
+
+
+
 if __name__ == "__main__":
-
-    os.makedirs(save_dir_bad, exist_ok=True)
-    os.makedirs(save_dir_good, exist_ok=True)
-
-    # vs= Video(RTSP_URL)
-    vs= Video(0)
-
-
-    thread_show_img = Thread(target=vs.show) #这里写vs.show()会立即执行，而不是传递函数引用,所以要用 `target=vs.show` 而不是 `target=vs.show()`
-    # 这里的 args=(1, 1) 是多余的，因为 show 方法不需要参数
-    thread_show_img.start()
-    thread_show_img.join()
+    app = QtWidgets.QApplication(sys.argv) # 创建PyQt应用程序实例
+    window = MainWindow() # 创建主窗口对象
+    window.show() # 显示主窗口
+    sys.exit(app.exec_()) # 启动Qt事件循环，让程序开始运行并响应事件

@@ -5,7 +5,7 @@ from threading import Thread
 import os
 
 from PyQt5 import QtWidgets, QtGui, QtCore
-from your_design_ui import Ui_MainWindow  # 假设你的UI文件生成为 your_design_ui.py
+from manually_ui import Ui_MainWindow  # 假设你的UI文件生成为 your_design_ui.py
 
 # --- 配置 ---
 # RTSP_URL = "192.168.1.102" # 如果使用RTSP流，请取消注释并设置URL
