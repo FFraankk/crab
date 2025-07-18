@@ -8,7 +8,7 @@ from PyQt5 import QtWidgets, QtGui, QtCore
 from manually_ui import Ui_MainWindow  # 假设你的UI文件生成为 your_design_ui.py
 
 # --- 配置 ---
-# RTSP_URL = "192.168.1.102" # 如果使用RTSP流，请取消注释并设置URL
+RTSP_URL = "rtsp://test:test1234@192.168.1.102/cam/realmonitor?channel=1&subtype=0" # 如果使用RTSP流，请取消注释并设置URL
 save_dir_bad = "saved_bad_crabs"
 save_dir_good = "saved_good_crabs"
 
@@ -125,7 +125,7 @@ class MainWindow(QtWidgets.QMainWindow):
         os.makedirs(save_dir_good, exist_ok=True)
 
         # 初始化 VideoProcessor
-        self.video_processor = VideoProcessor(0)  # 用于摄像头 (索引 0)
+        self.video_processor = VideoProcessor(RTSP_URL)  # 用于摄像头 (索引 0)
 
         # 连接摄像头状态信号
         self.video_processor.camera_status_signal.connect(self.handle_camera_status)

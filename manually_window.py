@@ -76,6 +76,7 @@ class ManuallyWindow:
 
 
 if __name__ == "__main__":
+    
     app = QtWidgets.QApplication(sys.argv) # 创建PyQt应用程序实例
     window = MainWindow() # 创建主窗口对象
     window.show() # 显示主窗口
